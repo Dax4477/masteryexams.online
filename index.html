@@ -1,413 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mastery Exams - Govt Job Preparation</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<title>MASTERY EXAMS - Your Path to Success</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
 <style>
-/* --- EXACT STYLES FROM EASYPSC SOURCE --- */
+/* --- EXACT STYLESHEET FROM EASYPSC (Minified for performance) --- */
 :root {
-    --theme-blue: #3280ff;
-    --dark-blue: #004F7A;
     --body-font: 'Open Sans', 'Noto Serif Malayalam', sans-serif;
     --title-font: 'Open Sans', 'Noto Serif Malayalam', serif;
+    --hero-color: #aaaaaa;
+    --white-bg: #ffffff;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--body-font);
-    background: #f4f4f4;
-    color: #000;
-    font-size: 14px;
-}
-
+* { box-sizing: border-box; }
+body { margin:0; padding:0; font-family: var(--body-font); background:#f4f4f4; color:#000; font-size:14px; line-height:1.4em; }
 a { text-decoration: none; color: #000; transition: all 0.3s ease; }
-a:hover { color: var(--theme-blue); }
+a:hover { color: #3280ff; }
+h1,h2,h3,h4,h5,h6 { font-family: var(--title-font); font-weight: 700; margin: 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; position: relative; }
+.row { position: relative; }
+.clearfix { clear: both; }
 
 /* Top Bar */
-.top-bar {
-    height: 40px;
-    background: var(--theme-blue);
-    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.1);
-    color: #fff;
-    line-height: 40px;
-}
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-}
-.top-menu a { color: #fff; font-size: 12px; margin-right: 15px; }
-.top-social a { color: #fff; margin-left: 10px; }
+.top-bar { height: 40px; background: #3280ff; box-shadow: inset 0 -15px 30px rgba(0,0,0,0.1); color: #fff; }
+.menu-top li { display: inline-block; line-height: 40px; }
+.menu-top li a { color: #fff; font-size: 12px; margin-right: 15px; }
+.social-sec { float: right; }
+.social-sec li { display: inline-block; line-height: 40px; }
+.social-sec li a { color: #fff; margin-left: 10px; font-size: 14px; }
 
 /* Header */
-.header-wrapper {
-    background: #fff;
-    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-.header-inner {
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo h1 {
-    font-size: 28px;
-    color: #000;
-    font-weight: 800;
-    margin: 0;
-    font-family: var(--title-font);
-}
-.logo span { color: var(--theme-blue); }
+.job-hero { background: #fff; box-shadow: 0 5px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; height: 60px; }
+.jobikisLogo { float: left; height: 60px; display: flex; align-items: center; }
+.jobikisLogo h1 { font-size: 26px; color: #000; font-family: 'Noto Serif Malayalam', serif; font-weight: 800; letter-spacing: -1px; }
+.jobikisLogo h1 span { color: #3280ff; }
 
 /* Main Menu */
-.main-menu ul { list-style: none; margin: 0; padding: 0; display: flex; }
-.main-menu ul li a {
-    display: block;
-    padding: 0 15px;
-    line-height: 65px;
-    font-weight: 600;
-    color: var(--theme-blue);
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.main-menu ul li a:hover { background: var(--theme-blue); color: #fff; }
+.jobikisMenu-pro { float: left; margin-left: 30px; }
+.jobikisMenu-pro ul { list-style: none; margin: 0; padding: 0; }
+.jobikisMenu-pro li { display: inline-block; line-height: 60px; }
+.jobikisMenu-pro li a { display: block; padding: 0 12px; font-weight: 600; font-size: 14px; color: #3280ff; text-transform: capitalize; }
+.jobikisMenu-pro li a:hover { background: #0088ff; color: #fff; }
 
-/* Breaking News Ticker */
-.ticker-wrap {
-    background: #e9e9e9;
-    border-bottom: 1px solid #ccc;
-    margin: 10px auto;
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    height: 35px;
-}
-.ticker-title {
-    background: var(--theme-blue);
-    color: #fff;
-    padding: 0 15px;
-    height: 35px;
-    line-height: 35px;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-.ticker-content {
-    flex-grow: 1;
-    overflow: hidden;
-    padding-left: 10px;
-    font-size: 13px;
-}
+/* Search Trigger */
+.search-wrap { float: right; height: 60px; display: flex; align-items: center; }
+.job-find { font-size: 18px; cursor: pointer; color: #3280ff; }
+
+/* Breaking Ticker */
+.ticker { background: #e9e9e9; border: 1px solid #ddd; margin: 15px 0; }
+.breaking-job-news { display: flex; align-items: center; height: 35px; overflow: hidden; }
+.breaking-job-news .widget-title { background: #3280ff; color: #fff; padding: 0 15px; height: 35px; line-height: 35px; font-size: 11px; text-transform: uppercase; font-weight: 700; margin-right: 10px; }
+.breaking-new-news { flex: 1; overflow: hidden; white-space: nowrap; font-size: 13px; font-weight: 600; }
+
+/* Featured Area (Marquee) */
+.featured-post-pro { background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-bottom: 20px; text-align: center; }
+.featured-post-pro marquee a { color: #255ebb; font-weight: 700; margin: 0 10px; font-size: 14px; }
+
+/* Colorful Box Grid */
+.job-color-Pikirt { display: flex; flex-wrap: wrap; margin: 0 -5px; margin-bottom: 20px; }
+.job-mposts-color { width: 25%; padding: 0 5px; margin-bottom: 10px; }
+.job-main-creative { padding: 10px; text-align: center; border-radius: 4px; overflow: hidden; height: 60px; display: flex; align-items: center; justify-content: center; }
+.job-main-creative a { color: #fff; font-weight: 600; font-size: 13px; line-height: 1.2; }
+/* Colors for boxes */
+.item0 .job-main-creative { background: #d70000; }
+.item1 .job-main-creative { background: #374987; }
+.item2 .job-main-creative { background: #712ebf; }
+.item3 .job-main-creative { background: #2acb3c; }
+.item4 .job-main-creative { background: #3231e0; }
+.item5 .job-main-creative { background: #2a8acb; }
+.item6 .job-main-creative { background: #bf2eaf; }
+.item7 .job-main-creative { background: #9e4f4f; }
 
 /* Layout Grid */
-.main-container {
-    max-width: 1100px;
-    margin: 20px auto;
-    display: flex;
-    gap: 20px;
-}
-.main-content { width: 70%; }
-.sidebar { width: 30%; }
+#center-container { margin-top: 10px; }
+.main-wrapper { display: flex; gap: 20px; }
+#feed-view { width: 70%; }
+#sidebar-container { width: 30%; }
 
-/* Post Styles */
-.section-title {
-    border-bottom: 2px solid var(--theme-blue);
-    margin-bottom: 20px;
-    position: relative;
-    height: 32px;
-}
-.section-title h3 {
-    background: #fff;
-    display: inline-block;
-    margin: 0;
-    font-size: 16px;
-    color: var(--theme-blue);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 30px;
-}
-.section-title h3:before {
-    content: '\f02d'; /* Icon */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    background: var(--theme-blue);
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    margin-right: 8px;
-}
+/* Widget Styles */
+.jobiki-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 5px; padding: 15px; margin-bottom: 20px; }
+.widget-title { border-bottom: 2px solid #3280ff; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+.widget-title h3 { font-size: 16px; color: #3280ff; font-weight: 700; text-transform: uppercase; margin: 0; padding-bottom: 5px; }
+.widget-title h3:before { content: '\f02d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; background: #3280ff; color: #fff; padding: 4px 6px; border-radius: 3px; margin-right: 8px; font-size: 12px; }
+.simple-viewmore { font-size: 12px; font-weight: 600; color: #3280ff; }
 
-/* Grid Posts */
-.grid-posts { display: flex; flex-wrap: wrap; gap: 20px; }
-.post-card {
-    width: calc(50% - 10px);
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.post-thumb {
-    height: 180px;
-    background: #ddd;
-    position: relative;
-}
-.post-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.post-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: var(--theme-blue);
-    color: #fff;
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 3px;
-}
-.post-details { padding: 15px; }
-.post-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
-}
-.post-meta { font-size: 11px; color: #888; margin-bottom: 10px; }
-.read-more {
-    display: inline-block;
-    background: #f1f1f1;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-.read-more:hover { background: var(--theme-blue); color: #fff; }
+/* Post List Style */
+.job-mposts-Pikirt { display: flex; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 15px; }
+.job-lr-creative { width: 110px; height: 80px; flex-shrink: 0; margin-right: 15px; border-radius: 5px; overflow: hidden; background: #eee; }
+.job-lr-creative img { width: 100%; height: 100%; object-fit: cover; }
+.piki-hero-box h2 { font-size: 15px; line-height: 1.4; margin-bottom: 5px; }
+.piki-hero-box h2 a { color: #000; font-weight: 700; }
+.piki-hero-box h2 a:hover { color: #3280ff; }
+.post-date { font-size: 11px; color: #999; }
+.post-date:before { content: '\f017'; font-family: 'Font Awesome 5 Free'; margin-right: 4px; }
+.read-more { display: inline-block; background: #f1f1f1; padding: 3px 10px; font-size: 11px; border-radius: 10px; margin-top: 5px; font-weight: 600; color: #333; }
+.read-more:hover { background: #3280ff; color: #fff; }
 
-/* Sidebar Widgets */
-.widget {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-}
-.social-buttons a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    font-weight: bold;
-}
-.btn-whatsapp { background: #25D366; }
-.btn-telegram { background: #0088cc; }
+/* Sidebar Social */
+.socialFilter { overflow: hidden; margin: 0 -5px; }
+.socialFilter li { float: left; width: 50%; padding: 5px; list-style: none; }
+.socialFilter li a { display: block; height: 35px; line-height: 35px; text-align: center; color: #fff; border-radius: 4px; font-weight: 600; font-size: 13px; }
+.socialFilter .facebook { background: #3b5998; }
+.socialFilter .whatsapp { background: #25D366; }
+.socialFilter .telegram { background: #0088cc; }
+.socialFilter .youtube { background: #cd201f; }
 
 /* Footer */
-footer { background: #090512; color: #aaa; padding: 40px 0; margin-top: 30px; }
-.footer-cols { display: flex; gap: 30px; }
+#footer-wrapper { background: #090512; color: #aaa; padding: 40px 0; margin-top: 30px; }
+.footer-widgets { display: flex; gap: 30px; }
 .footer-col { flex: 1; }
-.footer-col h3 { color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
-.copyright { background: #000; text-align: center; color: #666; padding: 15px 0; font-size: 12px; }
+.footer-col h3 { color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { padding: 5px 0; border-bottom: 1px solid #222; }
+.footer-col ul li a { color: #aaa; font-size: 13px; }
+#footer-copyright { background: #000; padding: 15px 0; text-align: center; font-size: 12px; color: #666; }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .main-container { flex-direction: column; }
-    .main-content, .sidebar { width: 100%; }
-    .post-card { width: 100%; }
-    .main-menu { display: none; } /* Hide menu on mobile for simple version */
-    .top-bar { display: none; }
+@media screen and (max-width: 768px) {
+    .jobikisMenu-pro, .top-bar { display: none; }
+    .main-wrapper { flex-direction: column; }
+    #feed-view, #sidebar-container { width: 100%; }
+    .job-mposts-color { width: 50%; }
 }
 </style>
 </head>
+
 <body>
 
 <div class="top-bar">
     <div class="container">
-        <div class="top-menu">
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
+        <div class="menu-top">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </ul>
         </div>
-        <div class="top-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <div class="social-sec">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
         </div>
     </div>
 </div>
 
-<header class="header-wrapper">
-    <div class="container header-inner">
-        <div class="logo">
-            <h1>MASTERY <span>EXAMS</span></h1>
+<header class="job-hero">
+    <div class="container">
+        <div class="jobikisLogo">
+            <a href="/">
+                <h1>MASTERY <span>EXAMS</span></h1>
+            </a>
         </div>
-        <nav class="main-menu">
+        <div class="jobikisMenu-pro">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Mock Tests</a></li>
-                <li><a href="#">Current Affairs</a></li>
-                <li><a href="#">Study Notes</a></li>
-                <li><a href="#">Job News</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Mega Menu</a></li>
+                <li><a href="#">Study With PIC</a></li>
+                <li><a href="#">PSC News</a></li>
+                <li><a href="#">Career Guru</a></li>
+                <li><a href="#">PYQ Mock Test</a></li>
             </ul>
-        </nav>
-        <div class="search-icon">
-            <i class="fas fa-search" style="color:var(--theme-blue); font-size: 20px; cursor:pointer;"></i>
+        </div>
+        <div class="search-wrap">
+            <div class="job-find"><i class="fa fa-search"></i></div>
         </div>
     </div>
 </header>
 
-<div class="ticker-wrap">
-    <div class="ticker-title"><i class="fas fa-bolt"></i> BREAKING</div>
-    <div class="ticker-content">
-        <marquee scrollamount="5">
-            <a href="#">New RBI Grade B Notification Out...</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <a href="#">Farmers Day Quiz 2025 Available Now...</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
-            <a href="#">Download LDC Previous Year Question Papers PDF...</a>
+<div class="clearfix"></div>
+
+<div class="ticker">
+    <div class="container">
+        <div class="breaking-job-news">
+            <div class="widget-title"><h3><i class="fas fa-bolt"></i> Breaking Posts</h3></div>
+            <div class="breaking-new-news">
+                <marquee scrollamount="6">
+                    <a href="#" style="margin-right:20px;">കർഷക ദിന ക്വിസ് 2025 (Farmers Day Quiz)</a>
+                    <a href="#" style="margin-right:20px;">സ്വാതന്ത്രദിന ക്വിസ് 2025 (Independence Day Quiz)</a>
+                    <a href="#" style="margin-right:20px;">RBI (Reserve Bank of India) Complete Notes</a>
+                    <a href="#" style="margin-right:20px;">പ്രധാനമന്ത്രി (Prime Minister of India) Notes</a>
+                </marquee>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="featured-post-pro">
+        <marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">
+            <a href="#">10th Level Prelims 2025</a>
+            <a href="#">+2 Level Prelims</a>
+            <a href="#">Degree Level Mains</a>
+            <a href="#">LDC Notification</a>
+            <a href="#">Devaswom Board Exam Special</a>
         </marquee>
     </div>
 </div>
 
-<div class="main-container">
-    
-    <div class="main-content">
-        
-        <div style="background:#eee; height:100px; width:100%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:1px dashed #ccc;">
-            Google AdSense Space
-        </div>
-
-        <div class="section-title">
-            <h3>Recent Updates</h3>
-        </div>
-
-        <div class="grid-posts">
-            <div class="post-card">
-                <div class="post-thumb">
-                    <img src="https://via.placeholder.com/400x250/3280ff/ffffff?text=Farmers+Day+Quiz" alt="Farmers Day Quiz">
-                    <span class="post-tag">Quiz</span>
-                </div>
-                <div class="post-details">
-                    <h2 class="post-title"><a href="#">കർഷക ദിന ക്വിസ് 2025 (Farmers Day Quiz)</a></h2>
-                    <div class="post-meta">
-                        <i class="far fa-clock"></i> August 14, 2025
-                    </div>
-                    <p style="color:#666; margin-bottom:15px;">Detailed study note and quiz regarding Farmers day for PSC exams...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="post-card">
-                <div class="post-thumb">
-                    <img src="https://via.placeholder.com/400x250/004F7A/ffffff?text=RBI+Notes" alt="RBI Notes">
-                    <span class="post-tag">Economics</span>
-                </div>
-                <div class="post-details">
-                    <h2 class="post-title"><a href="#">RBI (Reserve Bank of India) Complete Notes</a></h2>
-                    <div class="post-meta">
-                        <i class="far fa-clock"></i> August 04, 2025
-                    </div>
-                    <p style="color:#666; margin-bottom:15px;">History, Functions and Governors of RBI. Essential for Degree Level Prelims...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="post-card">
-                <div class="post-thumb">
-                    <img src="https://via.placeholder.com/400x250/e91e63/ffffff?text=Freedom+Struggle" alt="Freedom Struggle">
-                    <span class="post-tag">History</span>
-                </div>
-                <div class="post-details">
-                    <h2 class="post-title"><a href="#">Indian Independence Movement Quiz</a></h2>
-                    <div class="post-meta">
-                        <i class="far fa-clock"></i> August 06, 2025
-                    </div>
-                    <p style="color:#666; margin-bottom:15px;">Major movements, leaders and dates regarding Indian Freedom Struggle...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-
-             <div class="post-card">
-                <div class="post-thumb">
-                    <img src="https://via.placeholder.com/400x250/4caf50/ffffff?text=Job+News" alt="Job News">
-                    <span class="post-tag">Job News</span>
-                </div>
-                <div class="post-details">
-                    <h2 class="post-title"><a href="#">Kerala PSC LDC Notification 2025</a></h2>
-                    <div class="post-meta">
-                        <i class="far fa-clock"></i> August 01, 2025
-                    </div>
-                    <p style="color:#666; margin-bottom:15px;">Latest notification details, syllabus and eligibility for LDC Exam...</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin-top:30px; text-align:center;">
-            <a href="#" style="background:#3280ff; color:#fff; padding:10px 20px; border-radius:3px;">Load More Posts</a>
-        </div>
-    </div>
-
-    <div class="sidebar">
-        
-        <div class="widget">
-            <div class="section-title"><h3>Join Groups</h3></div>
-            <div class="social-buttons">
-                <a href="#" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
-                <a href="#" class="btn-telegram"><i class="fab fa-telegram-plane"></i> Join Telegram Channel</a>
-            </div>
-        </div>
-
-        <div class="widget">
-            <div class="section-title"><h3>Categories</h3></div>
-            <ul style="list-style:none; padding:0;">
-                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Mock Tests</a></li>
-                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Current Affairs</a></li>
-                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Job News</a></li>
-                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> SCERT Textbooks</a></li>
-            </ul>
-        </div>
-
-        <div class="widget" style="text-align:center;">
-            <div style="background:#eee; height:250px; width:100%; display:flex; align-items:center; justify-content:center; border:1px dashed #ccc;">
-                Sidebar Ad
-            </div>
-        </div>
-
+<div class="container">
+    <div class="job-color-Pikirt">
+        <div class="job-mposts-color item0"><div class="job-main-creative"><a href="#">കർഷക ദിന ക്വിസ് 2025<br><span style="font-size:10px; opacity:0.8;">Aug 14, 2025</span></a></div></div>
+        <div class="job-mposts-color item1"><div class="job-main-creative"><a href="#">സ്വാതന്ത്രദിന ക്വിസ് 2025<br><span style="font-size:10px; opacity:0.8;">Aug 06, 2025</span></a></div></div>
+        <div class="job-mposts-color item2"><div class="job-main-creative"><a href="#">RBI (Reserve Bank)<br><span style="font-size:10px; opacity:0.8;">Aug 04, 2025</span></a></div></div>
+        <div class="job-mposts-color item3"><div class="job-main-creative"><a href="#">പ്രധാനമന്ത്രി<br><span style="font-size:10px; opacity:0.8;">Aug 03, 2025</span></a></div></div>
+        <div class="job-mposts-color item4"><div class="job-main-creative"><a href="#">മൗലികാവകാശങ്ങൾ<br><span style="font-size:10px; opacity:0.8;">Aug 02, 2025</span></a></div></div>
+        <div class="job-mposts-color item5"><div class="job-main-creative"><a href="#">ആറ്റിങ്ങൽ കലാപം<br><span style="font-size:10px; opacity:0.8;">Aug 01, 2025</span></a></div></div>
+        <div class="job-mposts-color item6"><div class="job-main-creative"><a href="#">ഗുരുവായൂർ സത്യാഗ്രഹം<br><span style="font-size:10px; opacity:0.8;">July 31, 2025</span></a></div></div>
+        <div class="job-mposts-color item7"><div class="job-main-creative"><a href="#">ഹരിത വിപ്ലവം<br><span style="font-size:10px; opacity:0.8;">July 31, 2025</span></a></div></div>
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <div class="footer-cols">
-            <div class="footer-col">
-                <h3>About Us</h3>
-                <p>Mastery Exams is your number one source for all competitive exam preparations including Kerala PSC, SSC, and UPSC.</p>
+<div id="center-container">
+    <div class="container main-wrapper">
+        
+        <main id="feed-view">
+            
+            <div class="jobiki-box">
+                <div class="widget-title">
+                    <h3>10th Level Prelims</h3>
+                    <a class="simple-viewmore" href="#">Show More</a>
+                </div>
+                
+                <div class="job-mposts-Pikirt">
+                    <div class="job-lr-creative">
+                         <img src="https://via.placeholder.com/150x100/3280ff/ffffff?text=Current+Affairs" alt="Current Affairs">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title"><a href="#">10th Level Prelims - Current Affairs | കഴിഞ്ഞ പരീക്ഷക്ക് ചോദിച്ച ചോദ്യങ്ങളും അനുബന്ധ വിവരങ്ങളും</a></h2>
+                        <div class="post-date">June 08, 2022</div>
+                        <a class="read-more" href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="job-mposts-Pikirt">
+                    <div class="job-lr-creative">
+                        <img src="https://via.placeholder.com/150x100/004F7A/ffffff?text=Mock+Test" alt="Mock Test">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title"><a href="#">10th Level Prelims 2022 Mock Test | General Knowledge | Kerala PSC | Mastery Exams</a></h2>
+                        <div class="post-date">May 24, 2022</div>
+                        <a class="read-more" href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="job-mposts-Pikirt">
+                    <div class="job-lr-creative">
+                        <img src="https://via.placeholder.com/150x100/E1306C/ffffff?text=Constitution" alt="Constitution">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title"><a href="#">10th Level Prelims - Indian Constitution | കഴിഞ്ഞ പരീക്ഷക്ക് ചോദിച്ച ചോദ്യങ്ങളും</a></h2>
+                        <div class="post-date">May 23, 2022</div>
+                        <a class="read-more" href="#">Read More</a>
+                    </div>
+                </div>
             </div>
+
+            <div class="jobiki-box">
+                <div class="widget-title">
+                    <h3>Devaswom Board Exams</h3>
+                    <a class="simple-viewmore" href="#">Show More</a>
+                </div>
+
+                <div class="job-mposts-Pikirt">
+                    <div class="job-lr-creative">
+                        <img src="https://via.placeholder.com/150x100/orange/ffffff?text=KDRB+News" alt="KDRB">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title"><a href="#">Kerala Devaswom Recruitment Board (KDRB) has announced certificate verification dates</a></h2>
+                        <div class="post-date">November 22, 2024</div>
+                        <a class="read-more" href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="job-mposts-Pikirt">
+                    <div class="job-lr-creative">
+                        <img src="https://via.placeholder.com/150x100/green/ffffff?text=Syllabus" alt="Syllabus">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title"><a href="#">KDRB LDC 2025 - Syllabus Based SCERT Portions</a></h2>
+                        <div class="post-date">November 02, 2024</div>
+                        <a class="read-more" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background:#f0f0f0; border:1px dashed #ccc; height:100px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; color:#888;">
+                [AdSense Code Here]
+            </div>
+
+        </main>
+
+        <aside id="sidebar-container">
+            
+            <div class="jobiki-box">
+                <div class="widget-title"><h3>Social Plugin</h3></div>
+                <ul class="socialFilter">
+                    <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
+                    <li><a href="#" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+
+            <div class="jobiki-box">
+                <div class="widget-title"><h3>Choose Hit Lists</h3></div>
+                <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">Mock Test</a>
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">Current Affairs</a>
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">PDF Books</a>
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">Kerala</a>
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">Biology</a>
+                    <a href="#" style="background:#eee; padding:5px 10px; border-radius:3px; font-size:12px;">Job News</a>
+                </div>
+            </div>
+
+            <div class="jobiki-box">
+                <div class="widget-title"><h3>Weekly Special</h3></div>
+                
+                <div class="job-mposts-Pikirt" style="border:none;">
+                    <div class="job-lr-creative" style="width:70px; height:60px;">
+                        <img src="https://via.placeholder.com/70x60" alt="QP">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title" style="font-size:13px;"><a href="#">2023 Kerala PSC Full Question Paper And Answer Key</a></h2>
+                        <div class="post-date">Nov 02, 2024</div>
+                    </div>
+                </div>
+
+                <div class="job-mposts-Pikirt" style="border:none;">
+                    <div class="job-lr-creative" style="width:70px; height:60px;">
+                        <img src="https://via.placeholder.com/70x60" alt="History">
+                    </div>
+                    <div class="piki-hero-box">
+                        <h2 class="entry-title" style="font-size:13px;"><a href="#">Study Cool: 6 | യൂറോപ്യൻമാരുടെ വരവ് & അവരുടെ സംഭാവന</a></h2>
+                        <div class="post-date">Mar 19, 2021</div>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+</div>
+
+<div id="footer-wrapper">
+    <div class="container">
+        <div class="footer-widgets">
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul style="list-style:none; padding:0;">
-                    <li><a href="#" style="color:#aaa;">Privacy Policy</a></li>
-                    <li><a href="#" style="color:#aaa;">Disclaimer</a></li>
-                    <li><a href="#" style="color:#aaa;">Contact Us</a></li>
+                <h3>Random Posts</h3>
+                <ul>
+                    <li><a href="#">കർഷക ദിന ക്വിസ് 2025</a></li>
+                    <li><a href="#">സ്വാതന്ത്രദിന ക്വിസ് 2025</a></li>
+                    <li><a href="#">RBI (Reserve Bank of India)</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Contact</h3>
-                <p>Email: contact@masteryexams.online</p>
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li><a href="#">പ്രധാനമന്ത്രി Notes</a></li>
+                    <li><a href="#">മൗലികാവകാശങ്ങൾ</a></li>
+                    <li><a href="#">ആറ്റിങ്ങൽ കലാപം</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>About Mastery Exams</h3>
+                <p style="font-size:13px;">Mastery Exams provides free Notes for Central and State Competitive Exams. You can read job alerts from different departments like KPSC, SSC, Railway, Banks, UPSC.</p>
             </div>
         </div>
     </div>
-</footer>
-<div class="copyright">
-    Copyright © 2025 Mastery Exams. All Right Reserved.
+</div>
+<div id="footer-copyright">
+    All Right Reserved Copyright © 2025 Mastery Exams
 </div>
 
 </body>
