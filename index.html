@@ -1,199 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery Exams - Your Path to Government Jobs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Replicating the EasyPSC Blue */
-        .bg-theme-blue { background-color: #3280ff; }
-        .text-theme-blue { color: #3280ff; }
-        .border-theme-blue { border-color: #3280ff; }
-        .hover-theme-blue:hover { color: #3280ff; }
-        
-        /* Breaking News Ticker Animation */
-        .ticker-wrap {
-            width: 100%;
-            overflow: hidden;
-            background-color: #f3f4f6;
-            padding-left: 100%;
-            box-sizing: border-box;
-        }
-        .ticker {
-            display: inline-block;
-            white-space: nowrap;
-            padding-right: 100%;
-            animation: ticker 30s linear infinite;
-        }
-        @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mastery Exams - Govt Job Preparation</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* --- EXACT STYLES FROM EASYPSC SOURCE --- */
+:root {
+    --theme-blue: #3280ff;
+    --dark-blue: #004F7A;
+    --body-font: 'Open Sans', 'Noto Serif Malayalam', sans-serif;
+    --title-font: 'Open Sans', 'Noto Serif Malayalam', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    background: #f4f4f4;
+    color: #000;
+    font-size: 14px;
+}
+
+a { text-decoration: none; color: #000; transition: all 0.3s ease; }
+a:hover { color: var(--theme-blue); }
+
+/* Top Bar */
+.top-bar {
+    height: 40px;
+    background: var(--theme-blue);
+    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.1);
+    color: #fff;
+    line-height: 40px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.top-menu a { color: #fff; font-size: 12px; margin-right: 15px; }
+.top-social a { color: #fff; margin-left: 10px; }
+
+/* Header */
+.header-wrapper {
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.header-inner {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo h1 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 800;
+    margin: 0;
+    font-family: var(--title-font);
+}
+.logo span { color: var(--theme-blue); }
+
+/* Main Menu */
+.main-menu ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.main-menu ul li a {
+    display: block;
+    padding: 0 15px;
+    line-height: 65px;
+    font-weight: 600;
+    color: var(--theme-blue);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.main-menu ul li a:hover { background: var(--theme-blue); color: #fff; }
+
+/* Breaking News Ticker */
+.ticker-wrap {
+    background: #e9e9e9;
+    border-bottom: 1px solid #ccc;
+    margin: 10px auto;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+.ticker-title {
+    background: var(--theme-blue);
+    color: #fff;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.ticker-content {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+/* Layout Grid */
+.main-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+}
+.main-content { width: 70%; }
+.sidebar { width: 30%; }
+
+/* Post Styles */
+.section-title {
+    border-bottom: 2px solid var(--theme-blue);
+    margin-bottom: 20px;
+    position: relative;
+    height: 32px;
+}
+.section-title h3 {
+    background: #fff;
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    color: var(--theme-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.section-title h3:before {
+    content: '\f02d'; /* Icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    background: var(--theme-blue);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+/* Grid Posts */
+.grid-posts { display: flex; flex-wrap: wrap; gap: 20px; }
+.post-card {
+    width: calc(50% - 10px);
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.post-thumb {
+    height: 180px;
+    background: #ddd;
+    position: relative;
+}
+.post-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.post-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--theme-blue);
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+.post-details { padding: 15px; }
+.post-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+.post-meta { font-size: 11px; color: #888; margin-bottom: 10px; }
+.read-more {
+    display: inline-block;
+    background: #f1f1f1;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.read-more:hover { background: var(--theme-blue); color: #fff; }
+
+/* Sidebar Widgets */
+.widget {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+.social-buttons a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn-whatsapp { background: #25D366; }
+.btn-telegram { background: #0088cc; }
+
+/* Footer */
+footer { background: #090512; color: #aaa; padding: 40px 0; margin-top: 30px; }
+.footer-cols { display: flex; gap: 30px; }
+.footer-col { flex: 1; }
+.footer-col h3 { color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+.copyright { background: #000; text-align: center; color: #666; padding: 15px 0; font-size: 12px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container { flex-direction: column; }
+    .main-content, .sidebar { width: 100%; }
+    .post-card { width: 100%; }
+    .main-menu { display: none; } /* Hide menu on mobile for simple version */
+    .top-bar { display: none; }
+}
+</style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-    <div class="bg-theme-blue text-white text-xs py-2">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="hidden md:flex space-x-4">
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-            <div class="flex space-x-3">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
+<div class="top-bar">
+    <div class="container">
+        <div class="top-menu">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="top-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
+</div>
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="text-3xl font-bold text-gray-800">Mastery<span class="text-theme-blue">Exams</span></div>
-            </div>
-            
-            <div class="hidden md:flex border border-gray-300 rounded overflow-hidden">
-                <input type="text" placeholder="Search exams..." class="px-4 py-2 w-64 focus:outline-none">
-                <button class="bg-theme-blue text-white px-4 hover:bg-blue-700 transition"><i class="fas fa-search"></i></button>
-            </div>
+<header class="header-wrapper">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>MASTERY <span>EXAMS</span></h1>
         </div>
-        
-        <nav class="bg-gray-800 text-white">
-            <div class="container mx-auto px-4">
-                <ul class="flex overflow-x-auto space-x-6 py-3 text-sm font-semibold uppercase whitespace-nowrap">
-                    <li><a href="#" class="hover:text-theme-blue transition">Home</a></li>
-                    <li><a href="#" class="hover:text-theme-blue transition">Mock Tests</a></li>
-                    <li><a href="#" class="hover:text-theme-blue transition">Current Affairs</a></li>
-                    <li><a href="#" class="hover:text-theme-blue transition">Study Notes</a></li>
-                    <li><a href="#" class="hover:text-theme-blue transition">PYQ Papers</a></li>
-                </ul>
-            </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mock Tests</a></li>
+                <li><a href="#">Current Affairs</a></li>
+                <li><a href="#">Study Notes</a></li>
+                <li><a href="#">Job News</a></li>
+            </ul>
         </nav>
-    </header>
-
-    <div class="bg-gray-100 border-b border-gray-200 flex items-center">
-        <div class="bg-theme-blue text-white px-4 py-2 font-bold text-sm uppercase z-10">Breaking</div>
-        <div class="ticker-wrap py-2">
-            <div class="ticker text-sm text-gray-700">
-                <a href="#" class="mr-8 hover:text-theme-blue">• Kerala PSC LDC Notification 2025 Out</a>
-                <a href="#" class="mr-8 hover:text-theme-blue">• Reserve Bank of India (RBI) Study Notes Updated</a>
-                <a href="#" class="mr-8 hover:text-theme-blue">• Farmers Day Quiz 2025 Available Now</a>
-            </div>
+        <div class="search-icon">
+            <i class="fas fa-search" style="color:var(--theme-blue); font-size: 20px; cursor:pointer;"></i>
         </div>
     </div>
+</header>
 
-    <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+<div class="ticker-wrap">
+    <div class="ticker-title"><i class="fas fa-bolt"></i> BREAKING</div>
+    <div class="ticker-content">
+        <marquee scrollamount="5">
+            <a href="#">New RBI Grade B Notification Out...</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="#">Farmers Day Quiz 2025 Available Now...</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="#">Download LDC Previous Year Question Papers PDF...</a>
+        </marquee>
+    </div>
+</div>
+
+<div class="main-container">
+    
+    <div class="main-content">
         
-        <div class="w-full lg:w-2/3">
-            <div class="flex items-center justify-between border-b-2 border-theme-blue mb-6 pb-2">
-                <h2 class="text-xl font-bold text-theme-blue"><i class="fas fa-layer-group mr-2"></i>Recent Study Materials</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition overflow-hidden">
-                    <div class="h-48 bg-gray-200 relative">
-                        <img src="https://via.placeholder.com/400x250?text=Farmers+Day+Quiz" class="w-full h-full object-cover">
-                        <span class="absolute top-2 left-2 bg-theme-blue text-white text-xs px-2 py-1 rounded">Quiz</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2 leading-tight hover:text-theme-blue cursor-pointer">Farmers Day Quiz 2025: History & Significance</h3>
-                        <div class="text-gray-500 text-xs mb-3"><i class="far fa-clock mr-1"></i> Aug 14, 2025</div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Comprehensive guide on Farmers Day, including history, importance in Indian economy, and 50 practice questions...</p>
-                        <a href="#" class="inline-block border border-gray-300 rounded-full px-4 py-1 text-sm font-semibold hover:bg-theme-blue hover:text-white transition">Read More</a>
-                    </div>
-                </article>
-
-                <article class="bg-white rounded-lg shadow-sm border hover:shadow-md transition overflow-hidden">
-                    <div class="h-48 bg-gray-200 relative">
-                         <img src="https://via.placeholder.com/400x250?text=RBI+Study+Notes" class="w-full h-full object-cover">
-                         <span class="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">Economics</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2 leading-tight hover:text-theme-blue cursor-pointer">Reserve Bank of India (RBI): Complete Study Note</h3>
-                        <div class="text-gray-500 text-xs mb-3"><i class="far fa-clock mr-1"></i> Aug 04, 2025</div>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Detailed notes on RBI governors, monetary policy, establishment history, and key functions for PSC exams...</p>
-                        <a href="#" class="inline-block border border-gray-300 rounded-full px-4 py-1 text-sm font-semibold hover:bg-theme-blue hover:text-white transition">Read More</a>
-                    </div>
-                </article>
-            </div>
+        <div style="background:#eee; height:100px; width:100%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:1px dashed #ccc;">
+            Google AdSense Space
         </div>
 
-        <aside class="w-full lg:w-1/3 space-y-8">
-            
-            <div class="bg-white p-4 rounded-lg border shadow-sm">
-                <h3 class="text-lg font-bold border-b-2 border-theme-blue pb-2 mb-4 text-theme-blue">Join Our Communities</h3>
-                <div class="space-y-3">
-                    <a href="#" class="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded text-green-700 font-bold hover:bg-green-100 transition">
-                        <span><i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp Group</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                    <a href="#" class="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded text-blue-700 font-bold hover:bg-blue-100 transition">
-                        <span><i class="fab fa-telegram text-2xl mr-2"></i> Telegram Channel</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
+        <div class="section-title">
+            <h3>Recent Updates</h3>
+        </div>
+
+        <div class="grid-posts">
+            <div class="post-card">
+                <div class="post-thumb">
+                    <img src="https://via.placeholder.com/400x250/3280ff/ffffff?text=Farmers+Day+Quiz" alt="Farmers Day Quiz">
+                    <span class="post-tag">Quiz</span>
+                </div>
+                <div class="post-details">
+                    <h2 class="post-title"><a href="#">കർഷക ദിന ക്വിസ് 2025 (Farmers Day Quiz)</a></h2>
+                    <div class="post-meta">
+                        <i class="far fa-clock"></i> August 14, 2025
+                    </div>
+                    <p style="color:#666; margin-bottom:15px;">Detailed study note and quiz regarding Farmers day for PSC exams...</p>
+                    <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
 
-            <div class="bg-white p-4 rounded-lg border shadow-sm">
-                <h3 class="text-lg font-bold border-b-2 border-theme-blue pb-2 mb-4 text-theme-blue">Popular Posts</h3>
-                <ul class="space-y-4">
-                    <li class="flex gap-3">
-                        <div class="w-16 h-16 bg-gray-200 flex-shrink-0 rounded overflow-hidden">
-                             <img src="https://via.placeholder.com/100" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <a href="#" class="font-semibold text-sm hover:text-theme-blue line-clamp-2">Kerala Renaissance: Ayyankali & Sree Narayana Guru</a>
-                            <span class="text-xs text-gray-400">25k Views</span>
-                        </div>
-                    </li>
-                     <li class="flex gap-3">
-                        <div class="w-16 h-16 bg-gray-200 flex-shrink-0 rounded overflow-hidden">
-                             <img src="https://via.placeholder.com/100" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <a href="#" class="font-semibold text-sm hover:text-theme-blue line-clamp-2">Indian Constitution: Fundamental Rights Explained</a>
-                            <span class="text-xs text-gray-400">18k Views</span>
-                        </div>
-                    </li>
-                </ul>
+            <div class="post-card">
+                <div class="post-thumb">
+                    <img src="https://via.placeholder.com/400x250/004F7A/ffffff?text=RBI+Notes" alt="RBI Notes">
+                    <span class="post-tag">Economics</span>
+                </div>
+                <div class="post-details">
+                    <h2 class="post-title"><a href="#">RBI (Reserve Bank of India) Complete Notes</a></h2>
+                    <div class="post-meta">
+                        <i class="far fa-clock"></i> August 04, 2025
+                    </div>
+                    <p style="color:#666; margin-bottom:15px;">History, Functions and Governors of RBI. Essential for Degree Level Prelims...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
             </div>
 
-            <div class="bg-gray-100 h-64 flex items-center justify-center border border-dashed border-gray-400 text-gray-400 font-bold">
-                AdSense Space
+            <div class="post-card">
+                <div class="post-thumb">
+                    <img src="https://via.placeholder.com/400x250/e91e63/ffffff?text=Freedom+Struggle" alt="Freedom Struggle">
+                    <span class="post-tag">History</span>
+                </div>
+                <div class="post-details">
+                    <h2 class="post-title"><a href="#">Indian Independence Movement Quiz</a></h2>
+                    <div class="post-meta">
+                        <i class="far fa-clock"></i> August 06, 2025
+                    </div>
+                    <p style="color:#666; margin-bottom:15px;">Major movements, leaders and dates regarding Indian Freedom Struggle...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
             </div>
 
-        </aside>
+             <div class="post-card">
+                <div class="post-thumb">
+                    <img src="https://via.placeholder.com/400x250/4caf50/ffffff?text=Job+News" alt="Job News">
+                    <span class="post-tag">Job News</span>
+                </div>
+                <div class="post-details">
+                    <h2 class="post-title"><a href="#">Kerala PSC LDC Notification 2025</a></h2>
+                    <div class="post-meta">
+                        <i class="far fa-clock"></i> August 01, 2025
+                    </div>
+                    <p style="color:#666; margin-bottom:15px;">Latest notification details, syllabus and eligibility for LDC Exam...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:30px; text-align:center;">
+            <a href="#" style="background:#3280ff; color:#fff; padding:10px 20px; border-radius:3px;">Load More Posts</a>
+        </div>
     </div>
 
-    <footer class="bg-gray-900 text-gray-300 mt-12 py-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-            <div>
-                <h4 class="text-white font-bold text-lg mb-4">MasteryExams</h4>
-                <p>Your comprehensive guide to cracking competitive exams in Kerala and India. We provide free study materials, quizzes, and job updates.</p>
+    <div class="sidebar">
+        
+        <div class="widget">
+            <div class="section-title"><h3>Join Groups</h3></div>
+            <div class="social-buttons">
+                <a href="#" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
+                <a href="#" class="btn-telegram"><i class="fab fa-telegram-plane"></i> Join Telegram Channel</a>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-theme-blue">About Us</a></li>
-                    <li><a href="#" class="hover:text-theme-blue">Contact Us</a></li>
-                    <li><a href="#" class="hover:text-theme-blue">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-theme-blue">Terms & Conditions</a></li>
+        </div>
+
+        <div class="widget">
+            <div class="section-title"><h3>Categories</h3></div>
+            <ul style="list-style:none; padding:0;">
+                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Mock Tests</a></li>
+                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Current Affairs</a></li>
+                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> Job News</a></li>
+                <li style="border-bottom:1px dashed #ccc; padding:8px 0;"><a href="#"><i class="fas fa-angle-right"></i> SCERT Textbooks</a></li>
+            </ul>
+        </div>
+
+        <div class="widget" style="text-align:center;">
+            <div style="background:#eee; height:250px; width:100%; display:flex; align-items:center; justify-content:center; border:1px dashed #ccc;">
+                Sidebar Ad
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-cols">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Mastery Exams is your number one source for all competitive exam preparations including Kerala PSC, SSC, and UPSC.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul style="list-style:none; padding:0;">
+                    <li><a href="#" style="color:#aaa;">Privacy Policy</a></li>
+                    <li><a href="#" style="color:#aaa;">Disclaimer</a></li>
+                    <li><a href="#" style="color:#aaa;">Contact Us</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-lg mb-4">Disclaimer</h4>
-                <p class="text-xs">MasteryExams is an educational portal. We represent independent analysis and study materials. We are not affiliated with any government body.</p>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Email: contact@masteryexams.online</p>
             </div>
         </div>
-        <div class="text-center mt-8 pt-8 border-t border-gray-800 text-xs">
-            © 2025 Mastery Exams. All rights reserved.
-        </div>
-    </footer>
+    </div>
+</footer>
+<div class="copyright">
+    Copyright © 2025 Mastery Exams. All Right Reserved.
+</div>
 
 </body>
 </html>
