@@ -1,443 +1,239 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="n23nksNrBBzD1dOxh1oIr64oUDGRyyV0B8_FAMUpbLE" />
-<meta name="description" content="Mastery Exams - Free Mock Tests & Study Guides for Kerala PSC, SSC, and Competitive Exams.">
-<link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="n23nksNrBBzD1dOxh1oIr64oUDGRyyV0B8_FAMUpbLE" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastery Exams - Free Mock Tests & Study Guides</title>
+    
+    <link rel="stylesheet" href="popup.css">
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014556383468073"
+     crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600  ;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        
 
-<title>Mastery Exams - Free Mock Tests & Study Guides</title>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014556383468073" crossorigin="anonymous"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&family=Open+Sans:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-<style>
-/* ========== ROOT VARIABLES (EasyPSC Style) ========== */
-:root {
-    --body-font: 'Open Sans', 'Noto Serif Malayalam', sans-serif;
-    --title-font: 'Open Sans', 'Noto Serif Malayalam', serif;
-    --primary-color: #3280ff;
-    --primary-hover: #0088ff;
-    --text-dark: #000;
-    --text-light: #999;
-    --bg-white: #ffffff;
-    --bg-light: #f4f4f4;
-    --bg-lighter: #f9f9f9;
-    --border-color: #e0e0e0;
-    --border-light: #ddd;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-    --shadow-md: 0 5px 8px rgba(0,0,0,0.1);
-    --transition: all 0.3s ease;
-}
-
-/* ========== BASE STYLES ========== */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { margin: 0; padding: 0; font-family: var(--body-font); background: var(--bg-light); color: var(--text-dark); font-size: 14px; line-height: 1.4em; }
-a { text-decoration: none; color: var(--text-dark); transition: var(--transition); }
-a:hover { color: var(--primary-color); }
-h1, h2, h3, h4, h5, h6 { font-family: var(--title-font); font-weight: 700; margin: 0; }
-img { max-width: 100%; height: auto; display: block; }
-.clearfix { clear: both; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; position: relative; }
-
-/* ========== TOP BAR ========== */
-.top-bar { height: 40px; background: var(--primary-color); box-shadow: inset 0 -15px 30px rgba(0,0,0,0.1); color: #fff; }
-.menu-top li, .social-sec li { display: inline-block; line-height: 40px; }
-.menu-top li a, .social-sec li a { color: #fff; font-size: 12px; margin-right: 15px; padding: 0 5px; }
-.social-sec { float: right; }
-.social-sec li a { font-size: 14px; margin-left: 10px; margin-right: 0; }
-
-/* ========== HEADER ========== */
-.job-hero { background: var(--bg-white); box-shadow: var(--shadow-md); position: sticky; top: 0; z-index: 100; height: 60px; }
-.jobikisLogo { float: left; height: 60px; display: flex; align-items: center; }
-.jobikisLogo h1 { font-size: 26px; color: var(--text-dark); font-family: 'Noto Serif Malayalam', serif; font-weight: 800; letter-spacing: -1px; margin: 0; }
-.jobikisLogo h1 span { color: var(--primary-color); }
-.jobikisLogo a { display: flex; align-items: center; color: var(--text-dark); }
-
-/* ========== MAIN MENU ========== */
-.jobikisMenu-pro { float: left; margin-left: 30px; }
-.jobikisMenu-pro ul { list-style: none; margin: 0; padding: 0; }
-.jobikisMenu-pro li { display: inline-block; line-height: 60px; }
-.jobikisMenu-pro li a { display: block; padding: 0 12px; font-weight: 600; font-size: 14px; color: var(--primary-color); text-transform: capitalize; transition: var(--transition); }
-.jobikisMenu-pro li a:hover { background: var(--primary-hover); color: #fff; }
-
-/* ========== SEARCH & MOBILE ========== */
-.search-wrap { float: right; height: 60px; display: flex; align-items: center; }
-.job-find { font-size: 18px; cursor: pointer; color: var(--primary-color); padding: 8px; border:none; background:none; }
-.hamburger-menu { display: none; float: right; background: none; border: none; font-size: 24px; color: var(--primary-color); cursor: pointer; height: 60px; padding: 8px; }
-
-/* ========== TICKER & MARQUEE ========== */
-.ticker { background: #e9e9e9; border: 1px solid var(--border-light); margin: 15px 0; overflow: hidden; }
-.breaking-job-news { display: flex; align-items: center; height: 35px; overflow: hidden; }
-.breaking-job-news .widget-title { background: var(--primary-color); color: #fff; padding: 0 15px; height: 35px; line-height: 35px; font-size: 11px; text-transform: uppercase; font-weight: 700; margin-right: 10px; white-space: nowrap; flex-shrink: 0; }
-.breaking-new-news { flex: 1; overflow: hidden; font-size: 13px; font-weight: 600; }
-.marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
-.marquee-content { display: inline-block; padding-left: 100%; animation: marquee 40s linear infinite; }
-.marquee-content:hover { animation-play-state: paused; }
-@keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
-.marquee-content a { color: var(--primary-color); font-weight: 700; margin-right: 20px; display: inline-block; }
-
-/* ========== COLORFUL GRID ========== */
-.job-color-Pikirt { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 20px; }
-.job-main-creative { padding: 10px; text-align: center; border-radius: 4px; overflow: hidden; min-height: 60px; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
-.job-main-creative:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.job-main-creative a { color: #fff; font-weight: 600; font-size: 13px; line-height: 1.2; }
-.item0 .job-main-creative { background: #d70000; } .item1 .job-main-creative { background: #374987; } .item2 .job-main-creative { background: #712ebf; } .item3 .job-main-creative { background: #2acb3c; } .item4 .job-main-creative { background: #3231e0; } .item5 .job-main-creative { background: #2a8acb; } .item6 .job-main-creative { background: #bf2eaf; } .item7 .job-main-creative { background: #9e4f4f; }
-
-/* ========== LAYOUT ========== */
-#center-container { margin-top: 10px; }
-.main-wrapper { display: flex; gap: 20px; }
-#feed-view { width: 70%; }
-#sidebar-container { width: 30%; }
-
-/* ========== WIDGETS ========== */
-.jobiki-box { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: 5px; padding: 15px; margin-bottom: 20px; transition: var(--transition); }
-.jobiki-box:hover { box-shadow: var(--shadow-md); }
-.widget-title { border-bottom: 2px solid var(--primary-color); margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; }
-.widget-title h3 { font-size: 16px; color: var(--primary-color); font-weight: 700; text-transform: uppercase; margin: 0; }
-.widget-title h3::before { content: '\f02d'; font-family: 'Font Awesome 6 Free'; font-weight: 900; background: var(--primary-color); color: #fff; padding: 4px 6px; border-radius: 3px; margin-right: 8px; font-size: 12px; }
-.simple-viewmore { font-size: 12px; font-weight: 600; color: var(--primary-color); }
-
-/* ========== POST LIST ========== */
-.job-mposts-Pikirt { display: flex; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 15px; }
-.job-mposts-Pikirt:last-child { border-bottom: none; }
-.job-lr-creative { width: 110px; height: 80px; flex-shrink: 0; margin-right: 15px; border-radius: 5px; overflow: hidden; background: #eee; }
-.job-lr-creative img { width: 100%; height: 100%; object-fit: cover; }
-.piki-hero-box h2 { font-size: 15px; line-height: 1.4; margin-bottom: 5px; }
-.piki-hero-box h2 a { color: var(--text-dark); font-weight: 700; transition: var(--transition); }
-.piki-hero-box h2 a:hover { color: var(--primary-color); }
-.post-date { font-size: 11px; color: var(--text-light); margin-bottom: 5px; }
-.post-date::before { content: '\f017'; font-family: 'Font Awesome 6 Free'; margin-right: 4px; }
-.read-more { display: inline-block; background: #f1f1f1; padding: 3px 10px; font-size: 11px; border-radius: 10px; margin-top: 5px; font-weight: 600; color: #333; transition: var(--transition); }
-.read-more:hover { background: var(--primary-color); color: #fff; }
-
-/* ========== SIDEBAR SOCIAL ========== */
-.socialFilter { overflow: hidden; margin: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
-.socialFilter li a { display: flex; align-items: center; justify-content: center; height: 35px; text-align: center; color: #fff; border-radius: 4px; font-weight: 600; font-size: 13px; transition: var(--transition); gap: 5px; }
-.socialFilter li a:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.socialFilter .facebook { background: #3b5998; }
-.socialFilter .whatsapp { background: #25D366; }
-.socialFilter .telegram { background: #0088cc; }
-.socialFilter .youtube { background: #cd201f; }
-
-/* ========== AD PLACEHOLDER ========== */
-.ad-placeholder { background: #f0f0f0; border: 2px dashed #ccc; height: 250px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #888; border-radius: 4px; font-size: 14px; }
-
-/* ========== FOOTER ========== */
-#footer-wrapper { background: #090512; color: #aaa; padding: 40px 0; margin-top: 30px; }
-.footer-widgets { display: flex; gap: 30px; flex-wrap: wrap; }
-.footer-col { flex: 1; min-width: 250px; }
-.footer-col h3 { color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; }
-.footer-col ul { list-style: none; padding: 0; }
-.footer-col ul li { padding: 5px 0; border-bottom: 1px solid #222; }
-.footer-col ul li a { color: #aaa; font-size: 13px; transition: var(--transition); }
-.footer-col ul li a:hover { color: var(--primary-color); }
-#footer-copyright { background: #000; padding: 15px 0; text-align: center; font-size: 12px; color: #666; }
-
-/* ========== FLOATING BELL (FROM CODE 1) ========== */
-.floating-bell { position: fixed; bottom: 16px; right: 16px; width: 52px; height: 52px; background: #2c3e50; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 9999; transition: transform 0.2s; }
-.bell-dot { position: absolute; top: 10px; right: 10px; width: 10px; height: 10px; background: red; border-radius: 50%; border: 2px solid #2c3e50; display: none; }
-
-/* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
-    .hamburger-menu { display: block; }
-    .jobikisMenu-pro { display: none; position: absolute; top: 60px; left: 0; width: 100%; background: var(--bg-white); box-shadow: var(--shadow-md); z-index: 99; margin-left: 0; }
-    .jobikisMenu-pro.active { display: block; }
-    .jobikisMenu-pro ul { flex-direction: column; }
-    .jobikisMenu-pro li { display: block; line-height: normal; }
-    .jobikisMenu-pro li a { padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
-    .top-bar { display: none; }
-    .main-wrapper { flex-direction: column; }
-    #feed-view, #sidebar-container { width: 100%; }
-    .job-color-Pikirt { grid-template-columns: repeat(2, 1fr); }
-}
-@media screen and (max-width: 480px) {
-    .jobikisLogo h1 { font-size: 20px; }
-    .job-color-Pikirt { grid-template-columns: 1fr; }
-    .job-lr-creative { width: 80px; height: 60px; }
-}
-</style>
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
+    
+    
+   
+    
+    
 
-<body>
-
-<a href="inbox.html" class="floating-bell">
-    🔔
-    <div id="bellDot" class="bell-dot"></div>
-</a>
-
-<div class="top-bar">
-    <div class="container">
-        <div class="menu-top">
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="disclaimer.html">Disclaimer</a></li>
-            </ul>
-        </div>
-        <div class="social-sec">
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<header class="job-hero">
-    <div class="container">
-        <div class="jobikisLogo">
-            <a href="index.html">
-                <h1>MASTERY <span>EXAMS</span></h1>
-            </a>
-        </div>
-        <nav class="jobikisMenu-pro" id="mainMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="practice.html">Start Practicing</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-wrap">
-            <button class="job-find" id="searchBtn"><i class="fa fa-search"></i></button>
-            <button class="hamburger-menu" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
-        </div>
-    </div>
-</header>
-
-<div class="clearfix"></div>
-
-<div class="ticker">
-    <div class="container">
-        <div class="breaking-job-news">
-            <div class="widget-title"><h3>Updates</h3></div>
-            <div class="breaking-new-news">
-                <div class="marquee-container">
-                    <div class="marquee-content">
-                        <a href="#">Ace Your Next Exam with Confidence</a>
-                        <a href="#">New Study Guide: 10 Proven Techniques to Memorize Faster</a>
-                        <a href="#">Latest: Kerala Renaissance Key Leaders</a>
-                        <a href="#">Updated: Indian Constitution Articles You Must Know</a>
-                    </div>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">Mastery<span class="text-gray-900">Exams</span></a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="blog.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">Blog</a>
+                    <a href="about.html" class="hidden md:block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md font-medium">About</a>
+                    <a href="practice.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded-lg font-bold transition">
+                        Start Practicing
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </nav>
 
-<div class="container">
-    <div class="job-color-Pikirt">
-        <div class="job-mposts-color item0"><div class="job-main-creative"><a href="practice.html">Timed Practice<br><span style="font-size:10px; opacity:0.8;">Mock Tests</span></a></div></div>
-        <div class="job-mposts-color item1"><div class="job-main-creative"><a href="analysis.html">Instant Analysis<br><span style="font-size:10px; opacity:0.8;">Results</span></a></div></div>
-        <div class="job-mposts-color item2"><div class="job-main-creative"><a href="memorization-tips.html">Study Tips<br><span style="font-size:10px; opacity:0.8;">Memory</span></a></div></div>
-        <div class="job-mposts-color item3"><div class="job-main-creative"><a href="time-management.html">Exam Prep<br><span style="font-size:10px; opacity:0.8;">Time Mgmt</span></a></div></div>
-        <div class="job-mposts-color item4"><div class="job-main-creative"><a href="exam-anxiety.html">Motivation<br><span style="font-size:10px; opacity:0.8;">Anxiety</span></a></div></div>
-        <div class="job-mposts-color item5"><div class="job-main-creative"><a href="renaissance-leaders.html">History<br><span style="font-size:10px; opacity:0.8;">Kerala</span></a></div></div>
-        <div class="job-mposts-color item6"><div class="job-main-creative"><a href="constitution-basics.html">Civics<br><span style="font-size:10px; opacity:0.8;">Constitution</span></a></div></div>
-        <div class="job-mposts-color item7"><div class="job-main-creative"><a href="current-affairs-tips.html">Strategy<br><span style="font-size:10px; opacity:0.8;">Current Affairs</span></a></div></div>
-    </div>
-</div>
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                Ace Your Next Exam with <span class="text-blue-600">Confidence</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Free mock tests, study guides, and instant results to help you master your syllabus. Prepare smarter, not harder.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="practice.html" class="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
+                    Take a Free Mock Test
+                </a>
+                <a href="#latest-articles" class="bg-gray-100 text-gray-700 px-8 py-4 rounded-xl text-lg font-bold hover:bg-gray-200 transition">
+                    Read Study Guides
+                </a>
+            </div>
+        </div>
+    </header>
 
-<div id="center-container">
-    <div class="container main-wrapper">
-        
-        <main id="feed-view">
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-500 text-4xl mb-4">⏱️</div>
+                    <h3 class="text-xl font-bold mb-2">Timed Practice</h3>
+                    <p class="text-gray-600">Simulate real exam conditions with our precise timer system.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-500 text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-2">Instant Analysis</h3>
+                    <p class="text-gray-600">Get immediate feedback on your answers and track your progress.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="text-blue-500 text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-2">Mobile Friendly</h3>
+                    <p class="text-gray-600">Study on the go. Our platform works perfectly on phone and desktop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest-articles" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-l-4 border-blue-600 pl-4">Latest Study Guides</h2>
             
-            <div class="jobiki-box">
-                <div class="widget-title">
-                    <h3>Latest Study Guides</h3>
-                    <a class="simple-viewmore" href="blog.html">View All</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                
+                <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                   <img src="memory-loci-method.png" alt="Student managing time during an exam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-bold uppercase">Study Tips</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">
+                            <a href="memorization-tips.html" class="hover:text-blue-600">10 Proven Techniques to Memorize Faster</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Struggling to remember facts? Discover the "Loci Method" and other scientific ways to boost your recall...
+                        </p>
+                        <a href="memorization-tips.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="time-method.png" alt="Student managing time during an exam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-bold uppercase">Exam Prep</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">
+                            <a href="time-management.html" class="hover:text-blue-600">How to Manage Time During Online Exams</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Running out of time is the #1 reason students lose marks. Learn how to allocate your minutes effectively...
+                        </p>
+                        <a href="time-management.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                    <img src="anxity-method.png" alt="Student managing time during an exam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-purple-600 font-bold uppercase">Motivation</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">
+                            <a href="exam-anxiety.html" class="hover:text-blue-600">Overcoming Exam Anxiety: A Student's Guide</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Feeling nervous? Here are breathing exercises and mental shifts to calm your nerves before the big day...
+                        </p>
+                        <a href="exam-anxiety.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                    </div>
+                </article>
+                
+                 <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="Kerala Renaissance.png" alt="Kerala Renaissance History" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-indigo-600 font-bold uppercase">History</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">
+                        <a href="renaissance-leaders.html" class="hover:text-blue-600">Kerala Renaissance: Key Leaders & Movements</a>
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        From Sree Narayana Guru to Ayyankali. A quick revision guide on the major social reform movements frequently asked in LDC exams...
+                    </p>
+                    <a href="renaissance-leaders.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                </div>
+            </article>
+
+            <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="Indian Constitution.png" alt="Indian Constitution" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-emerald-600 font-bold uppercase">Civics</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">
+                        <a href="constitution-basics.html" class="hover:text-blue-600">Indian Constitution: Articles You Must Know</a>
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Don't memorize everything. Focus on Fundamental Rights (Part III) and Directive Principles. Here is the list of most repeated Articles...
+                    </p>
+                    <a href="constitution-basics.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                </div>
+            </article>
+
+            <article class="border rounded-xl overflow-hidden hover:shadow-lg transition">
+                <img src="Current Affairs.png" alt="Newspaper reading" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-rose-600 font-bold uppercase">Strategy</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">
+                        <a href="current-affairs-tips.html" class="hover:text-blue-600">How to Study Current Affairs for 2025</a>
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Stop reading random news. Learn how to filter news based on the KPSC syllabus, covering Sports, Awards, and International events...
+                    </p>
+                    <a href="current-affairs-tips.html" class="text-blue-600 font-semibold hover:underline">Read Article &rarr;</a>
+                </div>
+            </article>
+                
+            </div> 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 h-full">
+                    <h3 class="font-bold text-yellow-800 mb-2">⚡ Quick Hack of the Week</h3>
+                    <p class="text-sm text-yellow-900 mb-4">
+                        <strong>The Pomodoro Technique:</strong><br>
+                        Study for 25 minutes, break for 5. Repeat 4 times, then take a long break. It prevents burnout!
+                    </p>
+                    <a href="practice.html" class="block w-full bg-yellow-400 text-yellow-900 text-center py-2 rounded font-bold text-sm hover:bg-yellow-500 transition">Try it with our Timer</a>
                 </div>
                 
-                <article class="job-mposts-Pikirt">
-                    <figure class="job-lr-creative">
-                        <img src="memory-loci-method.png" alt="Memory Tips" onerror="this.src='https://via.placeholder.com/150x100/3280ff/ffffff?text=Study+Tips'">
-                    </figure>
-                    <div class="piki-hero-box">
-                        <h2 class="entry-title"><a href="memorization-tips.html">10 Proven Techniques to Memorize Faster</a></h2>
-                        <div class="post-date">Study Tips</div>
-                        <p style="color:#666; font-size:12px; margin-bottom:5px;">Struggling to remember facts? Discover the "Loci Method" and other scientific ways to boost your recall...</p>
-                        <a class="read-more" href="memorization-tips.html">Read More</a>
-                    </div>
-                </article>
+                <div class="bg-blue-600 p-6 rounded-xl text-white h-full">
+                    <h3 class="font-bold text-lg mb-2">Join the Newsletter</h3>
+                    <p class="text-blue-100 text-sm mb-4">Get the latest exam tips delivered to your inbox weekly.</p>
+                    <form action="subscribe.php" method="POST">
+    <input type="email" name="email" placeholder="Your email address" required class="w-full p-2 rounded mb-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+    <button type="submit" class="w-full bg-blue-800 hover:bg-blue-900 py-2 rounded font-bold transition shadow-md">Subscribe</button>
+</form>
+                </div>
 
-                <article class="job-mposts-Pikirt">
-                    <figure class="job-lr-creative">
-                        <img src="Kerala Renaissance.png" alt="Renaissance" onerror="this.src='https://via.placeholder.com/150x100/8B4513/ffffff?text=History'">
-                    </figure>
-                    <div class="piki-hero-box">
-                        <h2 class="entry-title"><a href="renaissance-leaders.html">Kerala Renaissance: Key Leaders & Movements</a></h2>
-                        <div class="post-date">History</div>
-                        <p style="color:#666; font-size:12px; margin-bottom:5px;">From Sree Narayana Guru to Ayyankali. A quick revision guide on the major social reform movements frequently asked in LDC exams...</p>
-                        <a class="read-more" href="renaissance-leaders.html">Read More</a>
-                    </div>
-                </article>
-
-                <article class="job-mposts-Pikirt">
-                    <figure class="job-lr-creative">
-                        <img src="Indian Constitution.png" alt="Constitution" onerror="this.src='https://via.placeholder.com/150x100/004F7A/ffffff?text=Civics'">
-                    </figure>
-                    <div class="piki-hero-box">
-                        <h2 class="entry-title"><a href="constitution-basics.html">Indian Constitution: Articles You Must Know</a></h2>
-                        <div class="post-date">Civics</div>
-                        <p style="color:#666; font-size:12px; margin-bottom:5px;">Don't memorize everything. Focus on Fundamental Rights (Part III) and Directive Principles. Here is the list of most repeated Articles...</p>
-                        <a class="read-more" href="constitution-basics.html">Read More</a>
-                    </div>
-                </article>
-
-                <article class="job-mposts-Pikirt">
-                    <figure class="job-lr-creative">
-                        <img src="Current Affairs.png" alt="Current Affairs" onerror="this.src='https://via.placeholder.com/150x100/E1306C/ffffff?text=Strategy'">
-                    </figure>
-                    <div class="piki-hero-box">
-                        <h2 class="entry-title"><a href="current-affairs-tips.html">How to Study Current Affairs for 2025</a></h2>
-                        <div class="post-date">Strategy</div>
-                        <p style="color:#666; font-size:12px; margin-bottom:5px;">Stop reading random news. Learn how to filter news based on the KPSC syllabus, covering Sports, Awards, and International events...</p>
-                        <a class="read-more" href="current-affairs-tips.html">Read More</a>
-                    </div>
-                </article>
             </div>
-
-            <div class="ad-placeholder">
-                [Google AdSense Space]
             </div>
+    </section>
 
-        </main>
-
-        <aside id="sidebar-container">
-            
-            <div class="jobiki-box">
-                <div class="widget-title"><h3>Follow Us</h3></div>
-                <ul class="socialFilter">
-                    <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    <li><a href="#" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
-                    <li><a href="#" class="youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
-                </ul>
-            </div>
-
-            <div class="jobiki-box" style="background:#fff9e6; border:1px solid #ffeeba;">
-                <div class="widget-title"><h3 style="color:#856404;">⚡ Quick Hack</h3></div>
-                <div style="padding:5px;">
-                    <h4 style="font-size:14px; margin-bottom:5px;">The Pomodoro Technique</h4>
-                    <p style="font-size:13px; color:#666; margin-bottom:15px;">Study for 25 minutes, break for 5. Repeat 4 times, then take a long break. It prevents burnout!</p>
-                    <a href="practice.html" style="display:block; text-align:center; background:#ffc107; color:#333; padding:8px; border-radius:4px; font-weight:bold;">Try Timer</a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-gray-800 pb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">MasteryExams</h3>
+                    <p class="text-gray-400 text-sm">
+                        The ultimate platform for student success. Practice, learn, and achieve your goals with our free tools.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="practice.html" class="hover:text-white">Mock Tests (App)</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="jobiki-box">
-                <div class="widget-title"><h3>Newsletter</h3></div>
-                <form action="subscribe.php" method="POST">
-                    <input type="email" name="email" placeholder="Your email address" required style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px; margin-bottom:10px;">
-                    <button type="submit" style="width:100%; padding:10px; background:var(--primary-color); color:white; border:none; border-radius:4px; cursor:pointer; font-weight:bold;">Subscribe</button>
-                </form>
-            </div>
-
-        </aside>
-    </div>
-</div>
-
-<footer id="footer-wrapper">
-    <div class="container">
-        <div class="footer-widgets">
-            <div class="footer-col">
-                <h3>About MasteryExams</h3>
-                <p>The ultimate platform for student success. Practice, learn, and achieve your goals with our free mock tests, study guides, and instant results.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="practice.html">Mock Tests (App)</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
+            <div class="pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 MasteryExams. All rights reserved.
             </div>
         </div>
-    </div>
-</footer>
-
-<div id="footer-copyright">
-    &copy; 2025 MasteryExams. All rights reserved.
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Mobile Menu Toggle
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mainMenu = document.getElementById('mainMenu');
-
-    if(hamburgerBtn && mainMenu) {
-        hamburgerBtn.addEventListener('click', function() {
-            mainMenu.classList.toggle('active');
-        });
-    }
-
-    // ORIGINAL TRACKING LOGIC
-    // 1. Get or Create Device ID
-    let deviceId = localStorage.getItem('unique_device_id');
-    if (!deviceId) {
-        deviceId = 'user_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('unique_device_id', deviceId);
-    }
-
-    // 2. Capture Visitor's Local Time
-    let now = new Date();
-    let userTime = now.getFullYear() + '-' +
-        String(now.getMonth() + 1).padStart(2, '0') + '-' +
-        String(now.getDate()).padStart(2, '0') + ' ' +
-        String(now.getHours()).padStart(2, '0') + ':' +
-        String(now.getMinutes()).padStart(2, '0') + ':' +
-        String(now.getSeconds()).padStart(2, '0');
-
-    // 3. Send Tracking Data
-    var data = new FormData();
-    data.append('url', window.location.href);
-    data.append('device_id', deviceId);
-    data.append('user_time', userTime); 
+    </footer>
     
-    if (navigator.sendBeacon) {
-        navigator.sendBeacon('track.php', data);
-    } else {
-        fetch('track.php', { method: 'POST', body: data });
-    }
-
-    // 4. CHECK FOR MESSAGES
-    setInterval(function() {
-        let formData = new FormData();
-        formData.append('device_id', deviceId);
-        
-        fetch('check_msg.php', { method: 'POST', body: formData })
-        .then(response => response.text())
-        .then(data => {
-            if (data.includes("new_message")) {
-                const dot = document.getElementById('bellDot');
-                if (dot) {
-                    dot.style.display = "block";
-                }
-            }
-        });
-    }, 5000); 
-});
-</script>
+<script src="popup.js"></script>
 
 </body>
 </html>
